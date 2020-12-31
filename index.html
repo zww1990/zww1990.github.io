@@ -3,8 +3,8 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+		<title>L~O~V~E</title>
 		<link rel="icon" type="image/x-icon" href="favicon.ico">
-		<title>index</title>
 		<link href="roboto/css.css" rel="stylesheet">
 		<link href="font/css/materialdesignicons.min.css" rel="stylesheet">
 		<link href="vuetify/vuetify.min.css" rel="stylesheet">
@@ -17,33 +17,29 @@
 					<v-carousel
 						cycle
 						interval="3000"
-						height="400"
+						height="100%"
 						hide-delimiter-background
+						hide-delimiters
 						show-arrows-on-hover
+						progress
 					  >
 					<v-carousel-item
 					  v-for="(slide, i) in slides"
 					  :key="i"
 					>
-					  <v-sheet
-						:color="colors[i]"
-						height="100%"
-					  >
-						<v-row
-						  class="fill-height"
-						  align="center"
-						  justify="center"
-						>
-						  <div class="display-3">
-							{{ slide }} Slide
-						  </div>
-						</v-row>
-					  </v-sheet>
+					  <v-img
+						  :src="slide"
+						  aspect-ratio="1.7"
+						  contain
+						></v-img>
 					</v-carousel-item>
 				  </v-carousel>
 				</v-container>
 			  </v-main>
 			</v-app>
+		</div>
+		<div>
+			<audio src="music/周杰伦-Mojito.mp3" autoplay loop></audio>
 		</div>
 	</body>
 	<script src="vue/vue.min.js"></script>
@@ -55,24 +51,47 @@
 				theme: { dark: true },
 			}),
 			data:{
-				colors: [
-				  'indigo',
-				  'warning',
-				  'pink darken-2',
-				  'red lighten-1',
-				  'deep-purple accent-4',
-				],
 				slides: [
-				  'First',
-				  'Second',
-				  'Third',
-				  'Fourth',
-				  'Fifth',
+				  'photos/LG9A4557_8寸暮云白摆台.jpg',
+				  'photos/LG9A4916_暮云白四组合.jpg',
+				  'photos/LG9A5087_暮云白四组合.jpg',
+				  'photos/LG9A5127_暮云白四组合.jpg',
+				  'photos/LG9A5424_10寸暮云白摆台.jpg',
+				  'photos/LG9A5469_10寸典雅黑金摆台(竖).jpg',
+				  'photos/LG9A5491_40寸暮云白相框.jpg',
+				  'photos/LG9A5511_10寸典雅黑金摆台(横).jpg',
+				  'photos/P001.jpg',
+				  'photos/P1001.jpg',
+				  'photos/P1002.jpg',
+				  'photos/P1003.jpg',
+				  'photos/P1004.jpg',
+				  'photos/P1005.jpg',
+				  'photos/P1006.jpg',
+				  'photos/P1007.jpg',
+				  'photos/P1008.jpg',
+				  'photos/P1009.jpg',
+				  'photos/P1010.jpg',
+				  'photos/P1011.jpg',
+				  'photos/P1012.jpg',
+				  'photos/P1013.jpg',
+				  'photos/P1014.jpg',
+				  'photos/P1015.jpg',
+				  'photos/P2001.jpg',
+				  'photos/P2002.jpg',
+				  'photos/P2003.jpg',
+				  'photos/P2004.jpg',
+				  'photos/P2005.jpg',
+				  'photos/P2006.jpg',
+				  'photos/P2007.jpg',
+				  'photos/P2008.jpg',
+				  'photos/P2009.jpg',
+				  'photos/P2010.jpg',
+				  'photos/P2011.jpg',
+				  'photos/P2012.jpg',
+				  'photos/P2013.jpg',
+				  'photos/暮云白轻奢四联动96x36cm_40寸秋樱黄四联动相框.jpg',
 				],
 			},
-			methods:{
-
-			}
 		})
 	</script>
 </html>
